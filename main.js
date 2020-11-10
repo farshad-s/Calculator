@@ -5,7 +5,7 @@ let calcOp = document.getElementsByClassName("operation");
 let clear = document.getElementsByClassName("clear")[0];
 let deleteLast = document.getElementsByClassName("delete")[0];
 
-// calcBottom.innerText = "";
+calcBottom.innerText = "3942";
 // calcTop.innerText = "";
 
 function clearCalc() {
@@ -15,4 +15,15 @@ function clearCalc() {
   });
 }
 
+function removeLast() {
+  deleteLast.addEventListener("click", function () {
+    calcBottom.innerText = calcBottom.innerText
+      .toString()
+      .split("")
+      .slice(0, -1)
+      .join("");
+  });
+}
+
 clearCalc();
+removeLast();
