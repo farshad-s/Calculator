@@ -91,6 +91,14 @@ function clickButton() {
   });
 }
 
+function multiplyOp() {
+  calcOp[0].addEventListener("click", function () {
+    calcTop.innerText = calcBottom.innerText + calcOp[0].innerText;
+    calcBottom.innerText = "";
+  });
+}
+
 clearCalc();
 removeLast();
 clickButton();
+multiplyOp();
