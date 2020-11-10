@@ -134,6 +134,11 @@ function equalsOp() {
         parseFloat(calcTop.innerText.split("*")[0]) *
         parseFloat(calcBottom.innerText);
       calcTop.innerText = "";
+    } else if (calcTop.innerText.includes("+") == true) {
+      calcBottom.innerText =
+        parseFloat(calcTop.innerText.split("+")[0]) +
+        parseFloat(calcBottom.innerText);
+      calcTop.innerText = "";
     }
   });
 }
