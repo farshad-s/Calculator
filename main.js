@@ -127,6 +127,8 @@ function divisionOp() {
   });
 }
 
+// Does the Mathematical Equation and returns it in bottom half of the calculator display
+// Empties the top half of the Calculator Display
 function equalsOp() {
   calcOp[3].addEventListener("click", function () {
     if (calcTop.innerText.includes("*") == true) {
