@@ -30,37 +30,37 @@ function removeLast() {
 // Numbers display in the Calculator when clicked
 function clickButton() {
   number[0].addEventListener("click", function () {
-    calcBottom.innerText += 7;
+    calcBottom.innerText += number[0].innerText;
   });
   number[1].addEventListener("click", function () {
-    calcBottom.innerText += 8;
+    calcBottom.innerText += number[1].innerText;
   });
   number[2].addEventListener("click", function () {
-    calcBottom.innerText += 9;
+    calcBottom.innerText += number[2].innerText;
   });
   number[3].addEventListener("click", function () {
-    calcBottom.innerText += 4;
+    calcBottom.innerText += number[3].innerText;
   });
   number[4].addEventListener("click", function () {
-    calcBottom.innerText += 5;
+    calcBottom.innerText += number[4].innerText;
   });
   number[5].addEventListener("click", function () {
-    calcBottom.innerText += 6;
+    calcBottom.innerText += number[5].innerText;
   });
   number[6].addEventListener("click", function () {
-    calcBottom.innerText += 1;
+    calcBottom.innerText += number[6].innerText;
   });
   number[7].addEventListener("click", function () {
-    calcBottom.innerText += 2;
+    calcBottom.innerText += number[7].innerText;
   });
   number[8].addEventListener("click", function () {
-    calcBottom.innerText += 3;
+    calcBottom.innerText += number[8].innerText;
   });
   number[9].addEventListener("click", function () {
-    calcBottom.innerText += 0;
+    calcBottom.innerText += number[9].innerText;
   });
   number[10].addEventListener("click", function () {
-    calcBottom.innerText += 0;
+    calcBottom.innerText += number[10].innerText;
   });
 }
 
