@@ -32,27 +32,27 @@ function clickButton() {
   number[0].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 7;
-    } else return (calcBottom.innerText += number[0].innerText);
+    } else return (calcBottom.innerText += Number(number[0].innerText));
   });
   number[1].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 8;
-    } else return (calcBottom.innerText += number[1].innerText);
+    } else return (calcBottom.innerText += Number(number[1].innerText));
   });
   number[2].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 9;
-    } else return (calcBottom.innerText += number[2].innerText);
+    } else return (calcBottom.innerText += Number(number[2].innerText));
   });
   number[3].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 4;
-    } else return (calcBottom.innerText += number[3].innerText);
+    } else return (calcBottom.innerText += Number(number[3].innerText));
   });
   number[4].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 5;
-    } else return (calcBottom.innerText += number[4].innerText);
+    } else return (calcBottom.innerText += Number(number[4].innerText));
   });
   number[5].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
@@ -62,22 +62,22 @@ function clickButton() {
   number[6].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 1;
-    } else return (calcBottom.innerText += number[6].innerText);
+    } else return (calcBottom.innerText += Number(number[6].innerText));
   });
   number[7].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 2;
-    } else return (calcBottom.innerText += number[7].innerText);
+    } else return (calcBottom.innerText += Number(number[7].innerText));
   });
   number[8].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 3;
-    } else return (calcBottom.innerText += number[8].innerText);
+    } else return (calcBottom.innerText += Number(number[8].innerText));
   });
   number[9].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 0;
-    } else return (calcBottom.innerText += number[9].innerText);
+    } else return (calcBottom.innerText += Number(number[9].innerText));
   });
   number[10].addEventListener("click", function () {
     if (calcBottom.innerText.includes(".")) {
