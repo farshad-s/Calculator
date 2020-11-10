@@ -21,3 +21,23 @@
   justify-content: center;
   background-color: orange;
 }
+
+.number,
+.operation {
+  min-width: 80px;
+  min-height: 60px;
+  margin: 2px;
+}
+
+.clear,
+.delete {
+  min-width: 166px;
+  margin: 2px;
+}
+
+.number:hover,
+.operation:hover,
+.clear:hover,
+.delete:hover {
+  cursor: pointer;
+}
