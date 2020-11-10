@@ -91,9 +91,38 @@ function clickButton() {
   });
 }
 
+// Displays number with multiply sign at the top of the calculator
+// Empties the bottom of the calculator
 function multiplyOp() {
   calcOp[0].addEventListener("click", function () {
     calcTop.innerText = calcBottom.innerText + calcOp[0].innerText;
+    calcBottom.innerText = "";
+  });
+}
+
+// Displays number with addition sign at the top of the calculator
+// Empties the bottom of the calculator
+function additionOp() {
+  calcOp[1].addEventListener("click", function () {
+    calcTop.innerText = calcBottom.innerText + calcOp[1].innerText;
+    calcBottom.innerText = "";
+  });
+}
+
+// Displays number with subtraction sign at the top of the calculator
+// Empties the bottom of the calculator
+function subtractionOp() {
+  calcOp[2].addEventListener("click", function () {
+    calcTop.innerText = calcBottom.innerText + calcOp[2].innerText;
+    calcBottom.innerText = "";
+  });
+}
+
+// Displays number with division sign at the top of the calculator
+// Empties the bottom of the calculator
+function divisionOp() {
+  calcOp[4].addEventListener("click", function () {
+    calcTop.innerText = calcBottom.innerText + calcOp[4].innerText;
     calcBottom.innerText = "";
   });
 }
@@ -113,4 +142,7 @@ clearCalc();
 removeLast();
 clickButton();
 multiplyOp();
+additionOp();
+subtractionOp();
+divisionOp();
 equalsOp();
