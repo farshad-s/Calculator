@@ -98,7 +98,19 @@ function multiplyOp() {
   });
 }
 
+function equalsOp() {
+  calcOp[3].addEventListener("click", function () {
+    if (calcTop.innerText.includes("*") == true) {
+      calcBottom.innerText =
+        parseFloat(calcTop.innerText.split("*")[0]) *
+        parseFloat(calcBottom.innerText);
+      calcTop.innerText = "";
+    }
+  });
+}
+
 clearCalc();
 removeLast();
 clickButton();
 multiplyOp();
+equalsOp();
