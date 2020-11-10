@@ -10,10 +10,29 @@
 
 .container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
   background-color: red;
+}
+
+.calc-results {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.calc-display-top {
+  color: rgba(0, 0, 0, 0.589);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calc-display-bottom {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  margin-top: 5px;
 }
 
 .button-holder {
@@ -31,7 +50,7 @@
 
 .clear,
 .delete {
-  min-width: 166px;
+  min-width: 164px;
   margin: 2px;
 }
 
