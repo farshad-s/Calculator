@@ -28,6 +28,9 @@ function removeLast() {
 }
 
 // Numbers display in the Calculator when clicked
+// Cannot click on Zero more than once if at the beginning
+// Clicking on any number after Zero turns Zero into that number at the beginning
+// Clicking on the decimal point will only show if it isn't already in the bottom results area
 function clickButton() {
   number[0].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
