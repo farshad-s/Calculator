@@ -5,8 +5,8 @@ let calcOp = document.getElementsByClassName("operation");
 let clear = document.getElementsByClassName("clear")[0];
 let deleteLast = document.getElementsByClassName("delete")[0];
 
-calcBottom.innerText = "3942";
-calcTop.innerText = "20";
+calcBottom.innerText = "";
+calcTop.innerText = "";
 
 // Clears all of the calculator
 function clearCalc() {
@@ -27,6 +27,7 @@ function removeLast() {
   });
 }
 
+// Numbers display in the Calculator when clicked
 function clickButton() {
   number[0].addEventListener("click", function () {
     calcBottom.innerText += 7;
@@ -59,10 +60,19 @@ function clickButton() {
     calcBottom.innerText += 0;
   });
   number[10].addEventListener("click", function () {
-    calcBottom.innerText += ".";
+    calcBottom.innerText += 0;
+  });
+}
+
+function preventMultipleZeros() {
+  number[9].addEventListener("click", function () {
+    if (calcBottom.innerText == 0) {
+      calcBottom.innerText = 0;
+    } else return (calcBottom.innerText += number[9].innerText);
   });
 }
 
 clearCalc();
 removeLast();
 clickButton();
+preventMultipleZeros();
