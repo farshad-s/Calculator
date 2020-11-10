@@ -29,37 +29,37 @@ function removeLast() {
 
 function clickButton() {
   number[0].addEventListener("click", function () {
-    calcBottom.innerText = 7;
+    calcBottom.innerText += 7;
   });
   number[1].addEventListener("click", function () {
-    calcBottom.innerText = 8;
+    calcBottom.innerText += 8;
   });
   number[2].addEventListener("click", function () {
-    calcBottom.innerText = 9;
+    calcBottom.innerText += 9;
   });
   number[3].addEventListener("click", function () {
-    calcBottom.innerText = 4;
+    calcBottom.innerText += 4;
   });
   number[4].addEventListener("click", function () {
-    calcBottom.innerText = 5;
+    calcBottom.innerText += 5;
   });
   number[5].addEventListener("click", function () {
-    calcBottom.innerText = 6;
+    calcBottom.innerText += 6;
   });
   number[6].addEventListener("click", function () {
-    calcBottom.innerText = 1;
+    calcBottom.innerText += 1;
   });
   number[7].addEventListener("click", function () {
-    calcBottom.innerText = 2;
+    calcBottom.innerText += 2;
   });
   number[8].addEventListener("click", function () {
-    calcBottom.innerText = 3;
+    calcBottom.innerText += 3;
   });
   number[9].addEventListener("click", function () {
-    calcBottom.innerText = 0;
+    calcBottom.innerText += 0;
   });
   number[10].addEventListener("click", function () {
-    calcBottom.innerText = ".";
+    calcBottom.innerText += ".";
   });
 }
 
