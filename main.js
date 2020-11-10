@@ -281,3 +281,4 @@ equalsOp();
 // Split the functions into different pages and import into one page - makes code cleaner
 // See if I can refactor the code for multiply/add/subtract/divide/equals - very similar code
 // See if I can refactor the code for clickButton - very similar code
+// Update the CSS so the Calculator is more presentable
