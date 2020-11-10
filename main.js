@@ -131,6 +131,7 @@ function additionOp() {
 
 // Displays number with subtraction sign at the top of the calculator
 // Empties the bottom of the calculator
+// Subtracts the number without having to use the equals sign if used whilst already in use
 function subtractionOp() {
   calcOp[2].addEventListener("click", function () {
     if (calcTop.innerText.includes("-") == true) {
@@ -149,10 +150,20 @@ function subtractionOp() {
 
 // Displays number with division sign at the top of the calculator
 // Empties the bottom of the calculator
+// Divides the number without having to use the equals sign if used whilst already in use
 function divisionOp() {
   calcOp[4].addEventListener("click", function () {
-    calcTop.innerText = calcBottom.innerText + calcOp[4].innerText;
-    calcBottom.innerText = "";
+    if (calcTop.innerText.includes("/") == true) {
+      calcTop.innerText =
+        parseFloat(calcTop.innerText.split("/")[0]) /
+          parseFloat(calcBottom.innerText) +
+        "/";
+      calcBottom.innerText = "";
+    } else {
+      calcBottom.innerText += calcOp[4].innerText;
+      calcTop.innerText = calcBottom.innerText;
+      calcBottom.innerText = "";
+    }
   });
 }
 
