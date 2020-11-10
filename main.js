@@ -88,15 +88,6 @@ function clickButton() {
   });
 }
 
-// function preventMultipleZeros() {
-//   number[9].addEventListener("click", function () {
-//     if (calcBottom.innerText == 0) {
-//       calcBottom.innerText = 0;
-//     } else return (calcBottom.innerText += number[9].innerText);
-//   });
-// }
-
 clearCalc();
 removeLast();
 clickButton();
-// preventMultipleZeros();
