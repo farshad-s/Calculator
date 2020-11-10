@@ -133,8 +133,17 @@ function additionOp() {
 // Empties the bottom of the calculator
 function subtractionOp() {
   calcOp[2].addEventListener("click", function () {
-    calcTop.innerText = calcBottom.innerText + calcOp[2].innerText;
-    calcBottom.innerText = "";
+    if (calcTop.innerText.includes("-") == true) {
+      calcTop.innerText =
+        parseFloat(calcTop.innerText.split("-")[0]) -
+        parseFloat(calcBottom.innerText) +
+        "-";
+      calcBottom.innerText = "";
+    } else {
+      calcBottom.innerText += calcOp[2].innerText;
+      calcTop.innerText = calcBottom.innerText;
+      calcBottom.innerText = "";
+    }
   });
 }
 
