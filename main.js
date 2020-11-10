@@ -112,10 +112,20 @@ function multiplyOp() {
 
 // Displays number with addition sign at the top of the calculator
 // Empties the bottom of the calculator
+// Adds the number without having to use the equals sign if used whilst already in use
 function additionOp() {
   calcOp[1].addEventListener("click", function () {
-    calcTop.innerText = calcBottom.innerText + calcOp[1].innerText;
-    calcBottom.innerText = "";
+    if (calcTop.innerText.includes("+") == true) {
+      calcTop.innerText =
+        parseFloat(calcTop.innerText.split("+")[0]) +
+        parseFloat(calcBottom.innerText) +
+        "+";
+      calcBottom.innerText = "";
+    } else {
+      calcBottom.innerText += calcOp[1].innerText;
+      calcTop.innerText = calcBottom.innerText;
+      calcBottom.innerText = "";
+    }
   });
 }
 
