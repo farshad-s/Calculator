@@ -30,49 +30,73 @@ function removeLast() {
 // Numbers display in the Calculator when clicked
 function clickButton() {
   number[0].addEventListener("click", function () {
-    calcBottom.innerText += number[0].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 7;
+    } else return (calcBottom.innerText += number[0].innerText);
   });
   number[1].addEventListener("click", function () {
-    calcBottom.innerText += number[1].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 8;
+    } else return (calcBottom.innerText += number[1].innerText);
   });
   number[2].addEventListener("click", function () {
-    calcBottom.innerText += number[2].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 9;
+    } else return (calcBottom.innerText += number[2].innerText);
   });
   number[3].addEventListener("click", function () {
-    calcBottom.innerText += number[3].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 4;
+    } else return (calcBottom.innerText += number[3].innerText);
   });
   number[4].addEventListener("click", function () {
-    calcBottom.innerText += number[4].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 5;
+    } else return (calcBottom.innerText += number[4].innerText);
   });
   number[5].addEventListener("click", function () {
-    calcBottom.innerText += number[5].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 6;
+    } else return (calcBottom.innerText += number[5].innerText);
   });
   number[6].addEventListener("click", function () {
-    calcBottom.innerText += number[6].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 1;
+    } else return (calcBottom.innerText += number[6].innerText);
   });
   number[7].addEventListener("click", function () {
-    calcBottom.innerText += number[7].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 2;
+    } else return (calcBottom.innerText += number[7].innerText);
   });
   number[8].addEventListener("click", function () {
-    calcBottom.innerText += number[8].innerText;
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = 3;
+    } else return (calcBottom.innerText += number[8].innerText);
   });
   number[9].addEventListener("click", function () {
-    calcBottom.innerText += number[9].innerText;
-  });
-  number[10].addEventListener("click", function () {
-    calcBottom.innerText += number[10].innerText;
-  });
-}
-
-function preventMultipleZeros() {
-  number[9].addEventListener("click", function () {
-    if (calcBottom.innerText == 0) {
+    if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = 0;
     } else return (calcBottom.innerText += number[9].innerText);
   });
+  number[10].addEventListener("click", function () {
+    if (calcBottom.innerText.includes(".")) {
+      calcBottom.innerText = calcBottom.innerText;
+    } else {
+      calcBottom.innerText += ".";
+    }
+  });
 }
+
+// function preventMultipleZeros() {
+//   number[9].addEventListener("click", function () {
+//     if (calcBottom.innerText == 0) {
+//       calcBottom.innerText = 0;
+//     } else return (calcBottom.innerText += number[9].innerText);
+//   });
+// }
 
 clearCalc();
 removeLast();
 clickButton();
-preventMultipleZeros();
+// preventMultipleZeros();
