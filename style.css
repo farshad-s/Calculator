@@ -8,8 +8,16 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.calc-holder {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: red;
+}
+
+.button-holder {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  background-color: orange;
 }
