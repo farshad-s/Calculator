@@ -35,55 +35,82 @@ function clickButton() {
   number[0].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[0].innerText);
-    } else if (calcBottom.innerText.length == 5) {
+    } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
-      alert("Error, cannot return more than 5 characters");
+      alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(number[0].innerText);
   });
   number[1].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[1].innerText);
-    } else return (calcBottom.innerText += Number(number[1].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[1].innerText);
   });
   number[2].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[2].innerText);
-    } else return (calcBottom.innerText += Number(number[2].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[2].innerText);
   });
   number[3].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[3].innerText);
-    } else return (calcBottom.innerText += Number(number[3].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[3].innerText);
   });
   number[4].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[4].innerText);
-    } else return (calcBottom.innerText += Number(number[4].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[4].innerText);
   });
   number[5].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[5].innerText);
-    } else return (calcBottom.innerText += number[5].innerText);
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[5].innerText);
   });
   number[6].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[6].innerText);
-    } else return (calcBottom.innerText += Number(number[6].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[6].innerText);
   });
   number[7].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[7].innerText);
-    } else return (calcBottom.innerText += Number(number[7].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[7].innerText);
   });
   number[8].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[8].innerText);
-    } else return (calcBottom.innerText += Number(number[8].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(number[8].innerText);
   });
   number[9].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[9].innerText);
-    } else return (calcBottom.innerText += Number(number[9].innerText));
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 20 characters");
+    } else calcBottom.innerText += Number(number[9].innerText);
   });
   number[10].addEventListener("click", function () {
     if (calcBottom.innerText.includes(".")) {
