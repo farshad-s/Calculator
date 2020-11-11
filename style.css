@@ -1,3 +1,12 @@
+body {
+  background: rgb(7, 62, 156);
+  background: linear-gradient(
+    90deg,
+    rgba(7, 62, 156, 1) 12%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -14,12 +23,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  background-color: red;
 }
 
 .calc-results {
   background-color: lightblue;
-  padding: 20px;
+  padding: 30px;
 }
 
 .calc-display-top {
@@ -38,7 +46,7 @@
 .button-holder {
   display: flex;
   justify-content: center;
-  background-color: orange;
+  background-color: white;
 }
 
 .number,
