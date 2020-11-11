@@ -31,6 +31,7 @@ function removeLast() {
 // Cannot click on Zero more than once if at the beginning
 // Clicking on any number after Zero turns Zero into that number at the beginning
 // Clicking on the decimal point will only show if it isn't already in the bottom results area
+// Maximum number of characters that can be input into the calculator is 25
 function clickButton() {
   number[0].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
@@ -109,12 +110,15 @@ function clickButton() {
       calcBottom.innerText = Number(number[9].innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
-      alert("Error, cannot return more than 20 characters");
+      alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(number[9].innerText);
   });
   number[10].addEventListener("click", function () {
     if (calcBottom.innerText.includes(".")) {
       calcBottom.innerText = calcBottom.innerText;
+    } else if (calcBottom.innerText.length == 25) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 25 characters");
     } else {
       calcBottom.innerText += ".";
     }
