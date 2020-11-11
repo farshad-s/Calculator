@@ -313,4 +313,3 @@ equalsOp();
 // Split the functions into different pages and import into one page - makes code cleaner
 // See if I can refactor the code for multiply/add/subtract/divide/equals - very similar code
 // See if I can refactor the code for clickButton - very similar code
-// Expand the size of the results area if a really long number is put in
