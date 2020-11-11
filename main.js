@@ -35,7 +35,10 @@ function clickButton() {
   number[0].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(number[0].innerText);
-    } else return (calcBottom.innerText += Number(number[0].innerText));
+    } else if (calcBottom.innerText.length == 5) {
+      calcBottom.innerText = calcBottom.innerText;
+      alert("Error, cannot return more than 5 characters");
+    } else calcBottom.innerText += Number(number[0].innerText);
   });
   number[1].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
@@ -267,6 +270,8 @@ function equalsOp() {
   });
 }
 
+console.log(calcBottom.innerText.length);
+
 clearCalc();
 removeLast();
 clickButton();
@@ -281,4 +286,4 @@ equalsOp();
 // Split the functions into different pages and import into one page - makes code cleaner
 // See if I can refactor the code for multiply/add/subtract/divide/equals - very similar code
 // See if I can refactor the code for clickButton - very similar code
-// Update the CSS so the Calculator is more presentable
+// Expand the size of the results area if a really long number is put in
