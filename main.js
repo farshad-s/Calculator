@@ -299,3 +299,8 @@ additionOp();
 subtractionOp();
 divisionOp();
 equalsOp();
+
+// Tasks to do
+// Refactor clickButton code
+// Fix bug when clicking on two operations in a row
+// Split the code into different files - then import into one file
