@@ -80,6 +80,7 @@ function multiply(signOne) {
     parseFloat(calcTop.innerText.split(signOne)[0]) *
       parseFloat(calcBottom.innerText) +
     signOne;
+  calcBottom.innerText = "";
 }
 
 function addition(signOne) {
@@ -87,6 +88,7 @@ function addition(signOne) {
     parseFloat(calcTop.innerText.split(signOne)[0]) +
     parseFloat(calcBottom.innerText) +
     signOne;
+  calcBottom.innerText = "";
 }
 
 function subtraction(signOne) {
@@ -94,6 +96,7 @@ function subtraction(signOne) {
     parseFloat(calcTop.innerText.split(signOne)[0]) -
     parseFloat(calcBottom.innerText) +
     signOne;
+  calcBottom.innerText = "";
 }
 
 function division(signOne) {
@@ -101,31 +104,19 @@ function division(signOne) {
     parseFloat(calcTop.innerText.split(signOne)[0]) /
       parseFloat(calcBottom.innerText) +
     signOne;
+  calcBottom.innerText = "";
 }
 
 function testMultiply(num, signOne, signTwo, signThree, signFour) {
   calcOp[num].addEventListener("click", function () {
     if (calcTop.innerText.includes(signOne) == true) {
-      multiply("*");
-      calcBottom.innerText = "";
+      multiply(signOne);
     } else if (calcTop.innerText.includes(signTwo) == true) {
-      calcTop.innerText =
-        parseFloat(calcTop.innerText.split(signTwo)[0]) +
-        parseFloat(calcBottom.innerText) +
-        signOne;
-      calcBottom.innerText = "";
+      addition(signTwo);
     } else if (calcTop.innerText.includes(signThree) == true) {
-      calcTop.innerText =
-        parseFloat(calcTop.innerText.split(signThree)[0]) -
-        parseFloat(calcBottom.innerText) +
-        signOne;
-      calcBottom.innerText = "";
+      subtraction(signThree);
     } else if (calcTop.innerText.includes(signFour) == true) {
-      calcTop.innerText =
-        parseFloat(calcTop.innerText.split(signFour)[0]) /
-          parseFloat(calcBottom.innerText) +
-        signOne;
-      calcBottom.innerText = "";
+      division(signFour);
     } else {
       calcBottom.innerText += calcOp[num].innerText;
       calcTop.innerText = calcBottom.innerText;
@@ -135,6 +126,9 @@ function testMultiply(num, signOne, signTwo, signThree, signFour) {
 }
 
 testMultiply(0, "*", "+", "-", "/");
+testMultiply(1, "+", "-", "/", "*");
+testMultiply(2, "-", "/", "*", "+");
+testMultiply(4, "/", "*", "+", "-");
 
 // function multiplyOp() {
 //   calcOp[0].addEventListener("click", function () {
@@ -312,7 +306,7 @@ function equalsOp() {
 clearCalc();
 removeLast();
 clickButton();
-multiplyOp();
+// multiplyOp();
 additionOp();
 subtractionOp();
 divisionOp();
