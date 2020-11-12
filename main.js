@@ -5,6 +5,8 @@ let calcOp = document.getElementsByClassName("operation");
 let clear = document.getElementsByClassName("clear")[0];
 let deleteLast = document.getElementsByClassName("delete")[0];
 
+let numSeven = document.getElementById(".num7");
+
 calcBottom.innerText = "";
 calcTop.innerText = "";
 
@@ -32,6 +34,18 @@ function removeLast() {
 // Clicking on any number after Zero turns Zero into that number at the beginning
 // Clicking on the decimal point will only show if it isn't already in the bottom results area
 // Maximum number of characters that can be input into the calculator is 25
+
+function numberTest(num) {
+  number[num].addEventListener("click", function () {
+    if (calcBottom.innerText == number[9].innerText) {
+      calcBottom.innerText = Number(this.innerText);
+    } else if (calcBottom.innerText.length == 25) {
+      alert("Error, cannot return more than 25 characters");
+    } else calcBottom.innerText += Number(this.innerText);
+  });
+}
+
+numberTest(0);
 
 function clickButton() {
   number[0].addEventListener("click", function () {
@@ -293,7 +307,7 @@ function equalsOp() {
 
 clearCalc();
 removeLast();
-clickButton();
+// clickButton();
 multiplyOp();
 additionOp();
 subtractionOp();
