@@ -77,60 +77,21 @@ function clickButton() {
 
 // Code below commented out so it doesn't stop functionality whilst I figure out the refactoring
 
-// function multiply(signOne) {
-//   calcTop.innerText =
-//     parseFloat(calcTop.innerText.split(signOne)[0]) *
-//       parseFloat(calcBottom.innerText) +
-//     signOne;
-//   calcBottom.innerText = "";
-// }
 
-// function addition(signOne) {
-//   calcTop.innerText =
-//     parseFloat(calcTop.innerText.split(signOne)[0]) +
-//     parseFloat(calcBottom.innerText) +
-//     signOne;
-//   calcBottom.innerText = "";
-// }
+function multiply(signOne, signTwo) {
+  calcOp[0].addEventListener("click", function () {
+    if (calcTop.innerText.includes(signOne) == true) {
+      calcTop.innerText =
+        parseFloat(calcTop.innerText.split(signOne)[0]) *
+          parseFloat(calcBottom.innerText) +
+        signTwo;
+      calcBottom.innerText = "";
+}
 
-// function subtraction(signOne) {
-//   calcTop.innerText =
-//     parseFloat(calcTop.innerText.split(signOne)[0]) -
-//     parseFloat(calcBottom.innerText) +
-//     signOne;
-//   calcBottom.innerText = "";
-// }
-
-// function division(signOne) {
-//   calcTop.innerText =
-//     parseFloat(calcTop.innerText.split(signOne)[0]) /
-//       parseFloat(calcBottom.innerText) +
-//     signOne;
-//   calcBottom.innerText = "";
-// }
-
-// function test(num, signOne, signTwo, signThree, signFour) {
-//   calcOp[num].addEventListener("click", function () {
-//     if (calcTop.innerText.includes(signOne) == true) {
-//       multiply(signOne);
-//     } else if (calcTop.innerText.includes(signTwo) == true) {
-//       addition(signTwo);
-//     } else if (calcTop.innerText.includes(signThree) == true) {
-//       subtraction(signThree);
-//     } else if (calcTop.innerText.includes(signFour) == true) {
-//       division(signFour);
-//     } else {
-//       calcBottom.innerText += calcOp[num].innerText;
-//       calcTop.innerText = calcBottom.innerText;
-//       calcBottom.innerText = "";
-//     }
-//   });
-// }
-
-// testMultiply(0, "*", "+", "-", "/");
-// testMultiply(1, "+", "-", "/", "*");
-// testMultiply(2, "-", "/", "*", "+");
-// testMultiply(4, "/", "*", "+", "-");
+multiply("*", "*")
+multiply("*", "+")
+multiply("*", "-")
+multiply("*", "/")
 
 function multiplyOp() {
   calcOp[0].addEventListener("click", function () {
@@ -308,7 +269,7 @@ function equalsOp() {
 clearCalc();
 removeLast();
 clickButton();
-multiplyOp();
+// multiplyOp();
 additionOp();
 subtractionOp();
 divisionOp();
