@@ -32,95 +32,96 @@ function removeLast() {
 // Clicking on any number after Zero turns Zero into that number at the beginning
 // Clicking on the decimal point will only show if it isn't already in the bottom results area
 // Maximum number of characters that can be input into the calculator is 25
+
 function clickButton() {
   number[0].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[0].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[0].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[1].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[1].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[1].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[2].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[2].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[2].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[3].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[3].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[3].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[4].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[4].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[4].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[5].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[5].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[5].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[6].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[6].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[6].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[7].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[7].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[7].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[8].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[8].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[8].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[9].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(number[9].innerText);
+      calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(number[9].innerText);
+    } else calcBottom.innerText += Number(this.innerText);
   });
   number[10].addEventListener("click", function () {
-    if (calcBottom.innerText.includes(".")) {
+    if (calcBottom.innerText.includes(this.innerText)) {
       calcBottom.innerText = calcBottom.innerText;
     } else if (calcBottom.innerText.length == 25) {
       calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else {
-      calcBottom.innerText += ".";
+      calcBottom.innerText += this.innerText;
     }
   });
 }
@@ -301,8 +302,6 @@ function equalsOp() {
   });
 }
 
-console.log(calcBottom.innerText.length);
-
 clearCalc();
 removeLast();
 clickButton();
@@ -311,9 +310,3 @@ additionOp();
 subtractionOp();
 divisionOp();
 equalsOp();
-
-// To do
-
-// Split the functions into different pages and import into one page - makes code cleaner
-// See if I can refactor the code for multiply/add/subtract/divide/equals - very similar code
-// See if I can refactor the code for clickButton - very similar code
