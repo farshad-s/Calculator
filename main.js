@@ -35,7 +35,7 @@ function removeLast() {
 // Clicking on the decimal point will only show if it isn't already in the bottom results area
 // Maximum number of characters that can be input into the calculator is 25
 
-function numberTest(num) {
+function numberClicker(num) {
   number[num].addEventListener("click", function () {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
@@ -45,79 +45,7 @@ function numberTest(num) {
   });
 }
 
-numberTest(0);
-
-function clickButton() {
-  number[0].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[1].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[2].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[3].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[4].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[5].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[6].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[7].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[8].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
-  number[9].addEventListener("click", function () {
-    if (calcBottom.innerText == number[9].innerText) {
-      calcBottom.innerText = Number(this.innerText);
-    } else if (calcBottom.innerText.length == 25) {
-      alert("Error, cannot return more than 25 characters");
-    } else calcBottom.innerText += Number(this.innerText);
-  });
+function decimalClicker() {
   number[10].addEventListener("click", function () {
     if (calcBottom.innerText.includes(this.innerText)) {
       calcBottom.innerText = calcBottom.innerText;
@@ -127,6 +55,20 @@ function clickButton() {
       calcBottom.innerText += this.innerText;
     }
   });
+}
+
+function clickButton() {
+  numberClicker(0);
+  numberClicker(1);
+  numberClicker(2);
+  numberClicker(3);
+  numberClicker(4);
+  numberClicker(5);
+  numberClicker(6);
+  numberClicker(7);
+  numberClicker(8);
+  numberClicker(9);
+  decimalClicker();
 }
 
 // Displays number with multiply sign at the top of the calculator
@@ -307,7 +249,7 @@ function equalsOp() {
 
 clearCalc();
 removeLast();
-// clickButton();
+clickButton();
 multiplyOp();
 additionOp();
 subtractionOp();
