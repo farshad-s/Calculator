@@ -38,7 +38,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -46,7 +45,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -54,7 +52,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -62,7 +59,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -70,7 +66,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -78,7 +73,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -86,7 +80,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -94,7 +87,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -102,7 +94,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -110,7 +101,6 @@ function clickButton() {
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
   });
@@ -118,7 +108,6 @@ function clickButton() {
     if (calcBottom.innerText.includes(this.innerText)) {
       calcBottom.innerText = calcBottom.innerText;
     } else if (calcBottom.innerText.length == 25) {
-      calcBottom.innerText = calcBottom.innerText;
       alert("Error, cannot return more than 25 characters");
     } else {
       calcBottom.innerText += this.innerText;
