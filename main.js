@@ -74,39 +74,76 @@ function clickButton() {
 // Displays number with multiply sign at the top of the calculator
 // Empties the bottom of the calculator
 // Multiples the number without having to use the equals sign if used whilst already in use
-function multiplyOp() {
-  calcOp[0].addEventListener("click", function () {
-    if (calcTop.innerText.includes("*") == true) {
+
+function testMultiply(num, signOne, signTwo, signThree, signFour) {
+  calcOp[num].addEventListener("click", function () {
+    if (calcTop.innerText.includes(signOne) == true) {
       calcTop.innerText =
-        parseFloat(calcTop.innerText.split("*")[0]) *
+        parseFloat(calcTop.innerText.split(signOne)[0]) *
           parseFloat(calcBottom.innerText) +
-        "*";
+        signOne;
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes("+") == true) {
+    } else if (calcTop.innerText.includes(signTwo) == true) {
       calcTop.innerText =
-        parseFloat(calcTop.innerText.split("+")[0]) +
+        parseFloat(calcTop.innerText.split(signTwo)[0]) +
         parseFloat(calcBottom.innerText) +
-        "*";
+        signOne;
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes("-") == true) {
+    } else if (calcTop.innerText.includes(signThree) == true) {
       calcTop.innerText =
-        parseFloat(calcTop.innerText.split("-")[0]) -
+        parseFloat(calcTop.innerText.split(signThree)[0]) -
         parseFloat(calcBottom.innerText) +
-        "*";
+        signOne;
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes("/") == true) {
+    } else if (calcTop.innerText.includes(signFour) == true) {
       calcTop.innerText =
-        parseFloat(calcTop.innerText.split("/")[0]) /
+        parseFloat(calcTop.innerText.split(signFour)[0]) /
           parseFloat(calcBottom.innerText) +
-        "*";
+        signOne;
       calcBottom.innerText = "";
     } else {
-      calcBottom.innerText += calcOp[0].innerText;
+      calcBottom.innerText += calcOp[num].innerText;
       calcTop.innerText = calcBottom.innerText;
       calcBottom.innerText = "";
     }
   });
 }
+
+testMultiply(0, "*", "+", "-", "/");
+
+// function multiplyOp() {
+//   calcOp[0].addEventListener("click", function () {
+//     if (calcTop.innerText.includes("*") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("*")[0]) *
+//           parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else if (calcTop.innerText.includes("+") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("+")[0]) +
+//         parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else if (calcTop.innerText.includes("-") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("-")[0]) -
+//         parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else if (calcTop.innerText.includes("/") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("/")[0]) /
+//           parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else {
+//       calcBottom.innerText += calcOp[0].innerText;
+//       calcTop.innerText = calcBottom.innerText;
+//       calcBottom.innerText = "";
+//     }
+//   });
+// }
 
 // Displays number with addition sign at the top of the calculator
 // Empties the bottom of the calculator
