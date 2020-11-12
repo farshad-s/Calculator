@@ -93,39 +93,55 @@ multiply("*", "+")
 multiply("*", "-")
 multiply("*", "/")
 
-function multiplyOp() {
+function addition(signOne, signTwo) {
   calcOp[0].addEventListener("click", function () {
-    if (calcTop.innerText.includes("*") == true) {
+    if (calcTop.innerText.includes(signOne) == true) {
       calcTop.innerText =
-        parseFloat(calcTop.innerText.split("*")[0]) *
+        parseFloat(calcTop.innerText.split(signOne)[0]) +
           parseFloat(calcBottom.innerText) +
-        "*";
+        signTwo;
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes("+") == true) {
-      calcTop.innerText =
-        parseFloat(calcTop.innerText.split("+")[0]) +
-        parseFloat(calcBottom.innerText) +
-        "*";
-      calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes("-") == true) {
-      calcTop.innerText =
-        parseFloat(calcTop.innerText.split("-")[0]) -
-        parseFloat(calcBottom.innerText) +
-        "*";
-      calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes("/") == true) {
-      calcTop.innerText =
-        parseFloat(calcTop.innerText.split("/")[0]) /
-          parseFloat(calcBottom.innerText) +
-        "*";
-      calcBottom.innerText = "";
-    } else {
-      calcBottom.innerText += calcOp[0].innerText;
-      calcTop.innerText = calcBottom.innerText;
-      calcBottom.innerText = "";
-    }
-  });
 }
+
+addition("+", "*")
+addition("+", "+")
+addition("+", "-")
+addition("+", "/")
+
+
+// function multiplyOp() {
+//   calcOp[0].addEventListener("click", function () {
+//     if (calcTop.innerText.includes("*") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("*")[0]) *
+//           parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else if (calcTop.innerText.includes("+") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("+")[0]) +
+//         parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else if (calcTop.innerText.includes("-") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("-")[0]) -
+//         parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else if (calcTop.innerText.includes("/") == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split("/")[0]) /
+//           parseFloat(calcBottom.innerText) +
+//         "*";
+//       calcBottom.innerText = "";
+//     } else {
+//       calcBottom.innerText += calcOp[0].innerText;
+//       calcTop.innerText = calcBottom.innerText;
+//       calcBottom.innerText = "";
+//     }
+//   });
+// }
 
 // Displays number with addition sign at the top of the calculator
 // Empties the bottom of the calculator
@@ -270,9 +286,9 @@ clearCalc();
 removeLast();
 clickButton();
 // multiplyOp();
-additionOp();
-subtractionOp();
-divisionOp();
+// additionOp();
+// subtractionOp();
+// divisionOp();
 equalsOp();
 
 // Tasks to do
