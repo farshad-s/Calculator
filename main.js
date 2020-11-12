@@ -71,77 +71,120 @@ function clickButton() {
   decimalClicker();
 }
 
+// Code below commented out so it doesn't stop functionality whilst I figure out the refactoring
+
+// function multiply(signOne, signTwo) {
+//   calcOp[0].addEventListener("click", function () {
+//     if (calcTop.innerText.includes(signOne) == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split(signOne)[0]) *
+//           parseFloat(calcBottom.innerText) +
+//         signTwo;
+//       calcBottom.innerText = "";
+//     } else calcBottom.innerText += calcOp[0].innerText;
+//     calcTop.innerText = calcBottom.innerText;
+//     calcBottom.innerText = "";
+//   });
+// }
+
+// multiply("*", "*");
+// multiply("*", "+");
+// multiply("*", "-");
+// multiply("*", "/");
+
+// function addition(signOne, signTwo) {
+//   calcOp[1].addEventListener("click", function () {
+//     if (calcTop.innerText.includes(signOne) == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split(signOne)[0]) +
+//         parseFloat(calcBottom.innerText) +
+//         signTwo;
+//       calcBottom.innerText = "";
+//     } else calcBottom.innerText += calcOp[0].innerText;
+//     calcTop.innerText = calcBottom.innerText;
+//     calcBottom.innerText = "";
+//   });
+// }
+
+// addition("+", "*");
+// addition("+", "+");
+// addition("+", "-");
+// addition("+", "/");
+
+// function subtraction(signOne, signTwo) {
+//   calcOp[2].addEventListener("click", function () {
+//     if (calcTop.innerText.includes(signOne) == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split(signOne)[0]) -
+//         parseFloat(calcBottom.innerText) +
+//         signTwo;
+//       calcBottom.innerText = "";
+//     } else calcBottom.innerText += calcOp[0].innerText;
+//     calcTop.innerText = calcBottom.innerText;
+//     calcBottom.innerText = "";
+//   });
+// }
+
+// subtraction("-", "*");
+// subtraction("-", "+");
+// subtraction("-", "-");
+// subtraction("-", "/");
+
+// function division(signOne, signTwo) {
+//   calcOp[4].addEventListener("click", function () {
+//     if (calcTop.innerText.includes(signOne) == true) {
+//       calcTop.innerText =
+//         parseFloat(calcTop.innerText.split(signOne)[0]) -
+//         parseFloat(calcBottom.innerText) +
+//         signTwo;
+//       calcBottom.innerText = "";
+//     } else calcBottom.innerText += calcOp[0].innerText;
+//     calcTop.innerText = calcBottom.innerText;
+//     calcBottom.innerText = "";
+//   });
+// }
+
+// division("/", "*");
+// division("/", "+");
+// division("/", "-");
+// division("/", "/");
+
 // Displays number with multiply sign at the top of the calculator
 // Empties the bottom of the calculator
 // Multiples the number without having to use the equals sign if used whilst already in use
-
-// Code below commented out so it doesn't stop functionality whilst I figure out the refactoring
-
-
-function multiply(signOne, signTwo) {
+function multiplyOp() {
   calcOp[0].addEventListener("click", function () {
-    if (calcTop.innerText.includes(signOne) == true) {
+    if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
-        parseFloat(calcTop.innerText.split(signOne)[0]) *
+        parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
-        signTwo;
+        "*";
       calcBottom.innerText = "";
-}
-
-multiply("*", "*")
-multiply("*", "+")
-multiply("*", "-")
-multiply("*", "/")
-
-function addition(signOne, signTwo) {
-  calcOp[0].addEventListener("click", function () {
-    if (calcTop.innerText.includes(signOne) == true) {
+    } else if (calcTop.innerText.includes("+") == true) {
       calcTop.innerText =
-        parseFloat(calcTop.innerText.split(signOne)[0]) +
-          parseFloat(calcBottom.innerText) +
-        signTwo;
+        parseFloat(calcTop.innerText.split("+")[0]) +
+        parseFloat(calcBottom.innerText) +
+        "*";
       calcBottom.innerText = "";
+    } else if (calcTop.innerText.includes("-") == true) {
+      calcTop.innerText =
+        parseFloat(calcTop.innerText.split("-")[0]) -
+        parseFloat(calcBottom.innerText) +
+        "*";
+      calcBottom.innerText = "";
+    } else if (calcTop.innerText.includes("/") == true) {
+      calcTop.innerText =
+        parseFloat(calcTop.innerText.split("/")[0]) /
+          parseFloat(calcBottom.innerText) +
+        "*";
+      calcBottom.innerText = "";
+    } else {
+      calcBottom.innerText += calcOp[0].innerText;
+      calcTop.innerText = calcBottom.innerText;
+      calcBottom.innerText = "";
+    }
+  });
 }
-
-addition("+", "*")
-addition("+", "+")
-addition("+", "-")
-addition("+", "/")
-
-
-// function multiplyOp() {
-//   calcOp[0].addEventListener("click", function () {
-//     if (calcTop.innerText.includes("*") == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split("*")[0]) *
-//           parseFloat(calcBottom.innerText) +
-//         "*";
-//       calcBottom.innerText = "";
-//     } else if (calcTop.innerText.includes("+") == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split("+")[0]) +
-//         parseFloat(calcBottom.innerText) +
-//         "*";
-//       calcBottom.innerText = "";
-//     } else if (calcTop.innerText.includes("-") == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split("-")[0]) -
-//         parseFloat(calcBottom.innerText) +
-//         "*";
-//       calcBottom.innerText = "";
-//     } else if (calcTop.innerText.includes("/") == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split("/")[0]) /
-//           parseFloat(calcBottom.innerText) +
-//         "*";
-//       calcBottom.innerText = "";
-//     } else {
-//       calcBottom.innerText += calcOp[0].innerText;
-//       calcTop.innerText = calcBottom.innerText;
-//       calcBottom.innerText = "";
-//     }
-//   });
-// }
 
 // Displays number with addition sign at the top of the calculator
 // Empties the bottom of the calculator
@@ -285,10 +328,10 @@ function equalsOp() {
 clearCalc();
 removeLast();
 clickButton();
-// multiplyOp();
-// additionOp();
-// subtractionOp();
-// divisionOp();
+multiplyOp();
+additionOp();
+subtractionOp();
+divisionOp();
 equalsOp();
 
 // Tasks to do
