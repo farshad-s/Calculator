@@ -120,25 +120,25 @@ function clickButton() {
 // Multiples the number without having to use the equals sign if used whilst already in use
 function multiplyOp() {
   calcOp[0].addEventListener("click", function () {
-    if (calcTop.innerText.includes(number + "*") == true) {
+    if (calcTop.innerText.includes(number && "*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
         "*";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "+") == true) {
+    } else if (calcTop.innerText.includes(number && "+") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("+")[0]) +
         parseFloat(calcBottom.innerText) +
         "*";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "-") == true) {
+    } else if (calcTop.innerText.includes(number && "-") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("-")[0]) -
         parseFloat(calcBottom.innerText) +
         "*";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "/") == true) {
+    } else if (calcTop.innerText.includes(number && "/") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("/")[0]) /
           parseFloat(calcBottom.innerText) +
@@ -157,25 +157,25 @@ function multiplyOp() {
 // Adds the number without having to use the equals sign if used whilst already in use
 function additionOp() {
   calcOp[1].addEventListener("click", function () {
-    if (calcTop.innerText.includes(number + "*") == true) {
+    if (calcTop.innerText.includes(number && "*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
         "+";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "+") == true) {
+    } else if (calcTop.innerText.includes(number && "+") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("+")[0]) +
         parseFloat(calcBottom.innerText) +
         "+";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "-") == true) {
+    } else if (calcTop.innerText.includes(number && "-") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("-")[0]) -
         parseFloat(calcBottom.innerText) +
         "+";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "/") == true) {
+    } else if (calcTop.innerText.includes(number && "/") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("/")[0]) /
           parseFloat(calcBottom.innerText) +
@@ -194,25 +194,25 @@ function additionOp() {
 // Subtracts the number without having to use the equals sign if used whilst already in use
 function subtractionOp() {
   calcOp[2].addEventListener("click", function () {
-    if (calcTop.innerText.includes(number + "*") == true) {
+    if (calcTop.innerText.includes(number && "*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
         "-";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "+") == true) {
+    } else if (calcTop.innerText.includes(number && "+") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("+")[0]) +
         parseFloat(calcBottom.innerText) +
         "-";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "-") == true) {
+    } else if (calcTop.innerText.includes(number && "-") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("-")[0]) -
         parseFloat(calcBottom.innerText) +
         "-";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "/") == true) {
+    } else if (calcTop.innerText.includes(number && "/") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("/")[0]) /
           parseFloat(calcBottom.innerText) +
@@ -231,25 +231,25 @@ function subtractionOp() {
 // Divides the number without having to use the equals sign if used whilst already in use
 function divisionOp() {
   calcOp[4].addEventListener("click", function () {
-    if (calcTop.innerText.includes(number + "*") == true) {
+    if (calcTop.innerText.includes(number && "*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
         "/";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "+") == true) {
+    } else if (calcTop.innerText.includes(number && "+") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("+")[0]) +
         parseFloat(calcBottom.innerText) +
         "/";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "-") == true) {
+    } else if (calcTop.innerText.includes(number && "-") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("-")[0]) -
         parseFloat(calcBottom.innerText) +
         "/";
       calcBottom.innerText = "";
-    } else if (calcTop.innerText.includes(number + "/") == true) {
+    } else if (calcTop.innerText.includes(number && "/") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("/")[0]) /
           parseFloat(calcBottom.innerText) +
@@ -267,22 +267,22 @@ function divisionOp() {
 // Empties the top half of the Calculator Display
 function equalsOp() {
   calcOp[3].addEventListener("click", function () {
-    if (calcTop.innerText.includes(number + "*") == true) {
+    if (calcTop.innerText.includes(number && "*") == true) {
       calcBottom.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
         parseFloat(calcBottom.innerText);
       calcTop.innerText = "";
-    } else if (calcTop.innerText.includes(number + "+") == true) {
+    } else if (calcTop.innerText.includes(number && "+") == true) {
       calcBottom.innerText =
         parseFloat(calcTop.innerText.split("+")[0]) +
         parseFloat(calcBottom.innerText);
       calcTop.innerText = "";
-    } else if (calcTop.innerText.includes(number + "-") == true) {
+    } else if (calcTop.innerText.includes(number && "-") == true) {
       calcBottom.innerText =
         parseFloat(calcTop.innerText.split("-")[0]) -
         parseFloat(calcBottom.innerText);
       calcTop.innerText = "";
-    } else if (calcTop.innerText.includes(number + "/") == true) {
+    } else if (calcTop.innerText.includes(number && "/") == true) {
       calcBottom.innerText =
         parseFloat(calcTop.innerText.split("/")[0]) /
         parseFloat(calcBottom.innerText);
