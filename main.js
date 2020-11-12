@@ -75,13 +75,38 @@ function clickButton() {
 // Empties the bottom of the calculator
 // Multiples the number without having to use the equals sign if used whilst already in use
 
+function multiply(signOne) {
+  calcTop.innerText =
+    parseFloat(calcTop.innerText.split(signOne)[0]) *
+      parseFloat(calcBottom.innerText) +
+    signOne;
+}
+
+function addition(signOne) {
+  calcTop.innerText =
+    parseFloat(calcTop.innerText.split(signOne)[0]) +
+    parseFloat(calcBottom.innerText) +
+    signOne;
+}
+
+function subtraction(signOne) {
+  calcTop.innerText =
+    parseFloat(calcTop.innerText.split(signOne)[0]) -
+    parseFloat(calcBottom.innerText) +
+    signOne;
+}
+
+function division(signOne) {
+  calcTop.innerText =
+    parseFloat(calcTop.innerText.split(signOne)[0]) /
+      parseFloat(calcBottom.innerText) +
+    signOne;
+}
+
 function testMultiply(num, signOne, signTwo, signThree, signFour) {
   calcOp[num].addEventListener("click", function () {
     if (calcTop.innerText.includes(signOne) == true) {
-      calcTop.innerText =
-        parseFloat(calcTop.innerText.split(signOne)[0]) *
-          parseFloat(calcBottom.innerText) +
-        signOne;
+      multiply("*");
       calcBottom.innerText = "";
     } else if (calcTop.innerText.includes(signTwo) == true) {
       calcTop.innerText =
