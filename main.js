@@ -11,6 +11,17 @@ let numSeven = document.getElementById(".num7");
 calcBottom.innerText = "";
 calcTop.innerText = "";
 
+function calculator() {
+  clearCalc();
+  removeLast();
+  clickNumber();
+  multiplicationOp();
+  additionOp();
+  subtractionOp();
+  divisionOp();
+  equalsOp();
+}
+
 // Clears all of the calculator
 function clearCalc() {
   clear.addEventListener("click", function () {
@@ -75,7 +86,7 @@ function clickNumber() {
 // Displays number with multiply sign at the top of the calculator
 // Empties the bottom of the calculator
 // Multiples the number without having to use the equals sign if used whilst already in use
-function multiplyOp() {
+function multiplicationOp() {
   calcOp[0].addEventListener("click", function () {
     if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
@@ -248,14 +259,7 @@ function equalsOp() {
   });
 }
 
-clearCalc();
-removeLast();
-clickNumber();
-multiplyOp();
-additionOp();
-subtractionOp();
-divisionOp();
-equalsOp();
+calculator();
 
 // Tasks to do
 // Fix bug when clicking on two operations in a row
