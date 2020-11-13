@@ -47,7 +47,7 @@ function numberClicker(num) {
 }
 
 function decimalClicker() {
-  number[10].addEventListener("click", function () {
+  decimal.addEventListener("click", function () {
     if (calcBottom.innerText.includes(this.innerText)) {
       calcBottom.innerText = calcBottom.innerText;
     } else if (calcBottom.innerText.length == 25) {
@@ -58,7 +58,7 @@ function decimalClicker() {
   });
 }
 
-function clickButton() {
+function clickNumber() {
   numberClicker(0);
   numberClicker(1);
   numberClicker(2);
@@ -328,7 +328,7 @@ function equalsOp() {
 
 clearCalc();
 removeLast();
-clickButton();
+clickNumber();
 multiplyOp();
 additionOp();
 subtractionOp();
