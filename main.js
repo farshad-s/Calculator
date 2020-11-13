@@ -6,8 +6,6 @@ let calcOp = document.getElementsByClassName("operation");
 let clear = document.getElementsByClassName("clear")[0];
 let deleteLast = document.getElementsByClassName("delete")[0];
 
-let numSeven = document.getElementById(".num7");
-
 calcBottom.innerText = "";
 calcTop.innerText = "";
 
