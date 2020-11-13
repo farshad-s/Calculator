@@ -72,84 +72,6 @@ function clickNumber() {
   decimalClicker();
 }
 
-// Code below commented out so it doesn't stop functionality whilst I figure out the refactoring
-
-// function multiply(signOne, signTwo) {
-//   calcOp[0].addEventListener("click", function () {
-//     if (calcTop.innerText.includes(signOne) == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split(signOne)[0]) *
-//           parseFloat(calcBottom.innerText) +
-//         signTwo;
-//       calcBottom.innerText = "";
-//     } else calcBottom.innerText += calcOp[0].innerText;
-//     calcTop.innerText = calcBottom.innerText;
-//     calcBottom.innerText = "";
-//   });
-// }
-
-// multiply("*", "*");
-// multiply("*", "+");
-// multiply("*", "-");
-// multiply("*", "/");
-
-// function addition(signOne, signTwo) {
-//   calcOp[1].addEventListener("click", function () {
-//     if (calcTop.innerText.includes(signOne) == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split(signOne)[0]) +
-//         parseFloat(calcBottom.innerText) +
-//         signTwo;
-//       calcBottom.innerText = "";
-//     } else calcBottom.innerText += calcOp[0].innerText;
-//     calcTop.innerText = calcBottom.innerText;
-//     calcBottom.innerText = "";
-//   });
-// }
-
-// addition("+", "*");
-// addition("+", "+");
-// addition("+", "-");
-// addition("+", "/");
-
-// function subtraction(signOne, signTwo) {
-//   calcOp[2].addEventListener("click", function () {
-//     if (calcTop.innerText.includes(signOne) == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split(signOne)[0]) -
-//         parseFloat(calcBottom.innerText) +
-//         signTwo;
-//       calcBottom.innerText = "";
-//     } else calcBottom.innerText += calcOp[0].innerText;
-//     calcTop.innerText = calcBottom.innerText;
-//     calcBottom.innerText = "";
-//   });
-// }
-
-// subtraction("-", "*");
-// subtraction("-", "+");
-// subtraction("-", "-");
-// subtraction("-", "/");
-
-// function division(signOne, signTwo) {
-//   calcOp[4].addEventListener("click", function () {
-//     if (calcTop.innerText.includes(signOne) == true) {
-//       calcTop.innerText =
-//         parseFloat(calcTop.innerText.split(signOne)[0]) -
-//         parseFloat(calcBottom.innerText) +
-//         signTwo;
-//       calcBottom.innerText = "";
-//     } else calcBottom.innerText += calcOp[0].innerText;
-//     calcTop.innerText = calcBottom.innerText;
-//     calcBottom.innerText = "";
-//   });
-// }
-
-// division("/", "*");
-// division("/", "+");
-// division("/", "-");
-// division("/", "/");
-
 // Displays number with multiply sign at the top of the calculator
 // Empties the bottom of the calculator
 // Multiples the number without having to use the equals sign if used whilst already in use
@@ -336,6 +258,5 @@ divisionOp();
 equalsOp();
 
 // Tasks to do
-// Refactor clickButton code
 // Fix bug when clicking on two operations in a row
 // Split the code into different files - then import into one file
