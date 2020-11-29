@@ -40,16 +40,12 @@ function removeLast() {
   });
 }
 
-// Numbers display in the Calculator when clicked
-// Cannot click on Zero more than once if at the beginning
-// Clicking on any number after Zero turns Zero into that number at the beginning
-// Clicking on the decimal point will only show if it isn't already in the bottom results area
-// Maximum number of characters that can be input into the calculator is 25
-
 function numberClicker(num) {
   number[num].addEventListener("click", function () {
+    // if first number is 0, it will be replaced with the next number that is clicked
     if (calcBottom.innerText == number[9].innerText) {
       calcBottom.innerText = Number(this.innerText);
+      // maximum number of characters that can be input is 25
     } else if (calcBottom.innerText.length == 25) {
       alert("Error, cannot return more than 25 characters");
     } else calcBottom.innerText += Number(this.innerText);
@@ -58,8 +54,10 @@ function numberClicker(num) {
 
 function decimalClicker() {
   decimal.addEventListener("click", function () {
+    // prevents adding more than 1 decimal
     if (calcBottom.innerText.includes(this.innerText)) {
       calcBottom.innerText = calcBottom.innerText;
+      // maximum number of characters that can be input is 25
     } else if (calcBottom.innerText.length == 25) {
       alert("Error, cannot return more than 25 characters");
     } else {
