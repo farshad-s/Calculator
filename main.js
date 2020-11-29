@@ -12,7 +12,8 @@ calcTop.innerText = "";
 function calculator() {
   clearCalc();
   removeLast();
-  clickNumber();
+  eachNumber();
+  decimalClicker();
   multiplicationOp();
   additionOp();
   subtractionOp();
@@ -67,18 +68,10 @@ function decimalClicker() {
   });
 }
 
-function clickNumber() {
-  numberClicker(0);
-  numberClicker(1);
-  numberClicker(2);
-  numberClicker(3);
-  numberClicker(4);
-  numberClicker(5);
-  numberClicker(6);
-  numberClicker(7);
-  numberClicker(8);
-  numberClicker(9);
-  decimalClicker();
+function eachNumber() {
+  for (let i = 0; i < number.length; i++) {
+    numberClicker(i);
+  }
 }
 
 // Displays number with multiply sign at the top of the calculator
