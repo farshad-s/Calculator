@@ -1,10 +1,10 @@
-let calcBottom = document.getElementsByClassName("calc-display-bottom")[0];
-let calcTop = document.getElementsByClassName("calc-display-top")[0];
+let calcTop = document.getElementById("calc-display-top");
+let calcBottom = document.getElementById("calc-display-bottom");
 let number = document.getElementsByClassName("number");
-let decimal = document.getElementsByClassName("decimal")[0];
+let decimal = document.getElementById("decimal");
 let calcOp = document.getElementsByClassName("operation");
-let clear = document.getElementsByClassName("clear")[0];
-let deleteLast = document.getElementsByClassName("delete")[0];
+let clear = document.getElementById("clear");
+let deleteLast = document.getElementById("delete");
 
 calcBottom.innerText = "";
 calcTop.innerText = "";
