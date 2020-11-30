@@ -252,8 +252,53 @@ function equalsOp() {
 // Adds accessibility by allowing you to use the keyboard
 function keyboardShortcuts() {
   document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 48) {
+      number[9].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
     if (event.keyCode === 49) {
       number[6].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 50) {
+      number[7].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 51) {
+      number[8].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 52) {
+      number[3].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 53) {
+      number[4].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 54) {
+      number[5].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 55) {
+      number[0].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 56) {
+      number[1].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 57) {
+      number[2].click();
     }
   });
 }
