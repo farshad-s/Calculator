@@ -292,7 +292,7 @@ function keyboardShortcuts() {
     }
   });
   document.addEventListener("keyup", function (event) {
-    if (event.keyCode === 56) {
+    if (event.keyCode === 56 && event.shiftKey != true) {
       number[1].click();
     }
   });
@@ -304,6 +304,41 @@ function keyboardShortcuts() {
   document.addEventListener("keyup", function (event) {
     if (event.keyCode === 190) {
       decimal.click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 56 && event.shiftKey) {
+      calcOp[0].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 187 && event.shiftKey) {
+      calcOp[1].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 189) {
+      calcOp[2].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 187 && event.shiftKey != true) {
+      calcOp[3].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 191) {
+      calcOp[4].click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 27) {
+      clear.click();
+    }
+  });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 8) {
+      deleteLast.click();
     }
   });
 }
