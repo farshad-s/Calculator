@@ -23,7 +23,7 @@ function calculator() {
 
 // Clears all of the calculator
 function clearCalc() {
-  clear.addEventListener("click", function () {
+  clear.addEventListener("click", () => {
     calcBottom.innerText = "";
     calcTop.innerText = "";
   });
@@ -31,7 +31,7 @@ function clearCalc() {
 
 // Removes the last entry in the calculator
 function removeLast() {
-  deleteLast.addEventListener("click", function () {
+  deleteLast.addEventListener("click", () => {
     calcBottom.innerText = calcBottom.innerText
       .toString()
       .split("")
@@ -76,7 +76,7 @@ function eachNumber() {
 // Empties the bottom of the calculator
 // Multiples the number without having to use the equals sign if used whilst already in use
 function multiplicationOp() {
-  calcOp[0].addEventListener("click", function () {
+  calcOp[0].addEventListener("click", () => {
     if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
@@ -113,7 +113,7 @@ function multiplicationOp() {
 // Empties the bottom of the calculator
 // Adds the number without having to use the equals sign if used whilst already in use
 function additionOp() {
-  calcOp[1].addEventListener("click", function () {
+  calcOp[1].addEventListener("click", () => {
     if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
@@ -150,7 +150,7 @@ function additionOp() {
 // Empties the bottom of the calculator
 // Subtracts the number without having to use the equals sign if used whilst already in use
 function subtractionOp() {
-  calcOp[2].addEventListener("click", function () {
+  calcOp[2].addEventListener("click", () => {
     if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
@@ -187,7 +187,7 @@ function subtractionOp() {
 // Empties the bottom of the calculator
 // Divides the number without having to use the equals sign if used whilst already in use
 function divisionOp() {
-  calcOp[4].addEventListener("click", function () {
+  calcOp[4].addEventListener("click", () => {
     if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
@@ -223,7 +223,7 @@ function divisionOp() {
 // Does the Mathematical Equation and returns it in bottom half of the calculator display
 // Empties the top half of the Calculator Display
 function equalsOp() {
-  calcOp[3].addEventListener("click", function () {
+  calcOp[3].addEventListener("click", () => {
     if (calcTop.innerText.includes("*") == true) {
       calcBottom.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
@@ -249,7 +249,3 @@ function equalsOp() {
 }
 
 calculator();
-
-// Tasks to do
-// Fix bug when clicking on two operations in a row
-// Split the code into different files - then import into one file
