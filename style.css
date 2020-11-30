@@ -58,7 +58,8 @@ body {
 
 .number,
 .operation,
-.decimal {
+.decimal,
+.equals {
   min-width: 80px;
   min-height: 60px;
   margin: 2px;
@@ -75,6 +76,7 @@ body {
 .number:hover,
 .operation:hover,
 .decimal:hover,
+.equals:hover,
 .clear:hover,
 .delete:hover {
   cursor: pointer;
