@@ -5,6 +5,7 @@ let decimal = document.getElementById("decimal");
 let calcOp = document.getElementsByClassName("operation");
 let clear = document.getElementById("clear");
 let deleteLast = document.getElementById("delete");
+let equals = document.getElementById("equals");
 
 calcBottom.innerText = "";
 calcTop.innerText = "";
@@ -78,7 +79,15 @@ function eachNumber() {
 // Multiples the number without having to use the equals sign if used whilst already in use
 function multiplicationOp() {
   calcOp[0].addEventListener("click", () => {
-    if (calcTop.innerText.includes("*") == true) {
+    if (
+      calcTop.innerText == "*" ||
+      calcTop.innerText == "+" ||
+      calcTop.innerText == "-" ||
+      calcTop.innerText == "/" ||
+      calcBottom.innerText == ""
+    ) {
+      calcTop.innerText = calcTop.innerText;
+    } else if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
@@ -115,7 +124,15 @@ function multiplicationOp() {
 // Adds the number without having to use the equals sign if used whilst already in use
 function additionOp() {
   calcOp[1].addEventListener("click", () => {
-    if (calcTop.innerText.includes("*") == true) {
+    if (
+      calcTop.innerText == "*" ||
+      calcTop.innerText == "+" ||
+      calcTop.innerText == "-" ||
+      calcTop.innerText == "/" ||
+      calcBottom.innerText == ""
+    ) {
+      calcTop.innerText = calcTop.innerText;
+    } else if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
@@ -152,7 +169,15 @@ function additionOp() {
 // Subtracts the number without having to use the equals sign if used whilst already in use
 function subtractionOp() {
   calcOp[2].addEventListener("click", () => {
-    if (calcTop.innerText.includes("*") == true) {
+    if (
+      calcTop.innerText == "*" ||
+      calcTop.innerText == "+" ||
+      calcTop.innerText == "-" ||
+      calcTop.innerText == "/" ||
+      calcBottom.innerText == ""
+    ) {
+      calcTop.innerText = calcTop.innerText;
+    } else if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
@@ -188,8 +213,16 @@ function subtractionOp() {
 // Empties the bottom of the calculator
 // Divides the number without having to use the equals sign if used whilst already in use
 function divisionOp() {
-  calcOp[4].addEventListener("click", () => {
-    if (calcTop.innerText.includes("*") == true) {
+  calcOp[3].addEventListener("click", () => {
+    if (
+      calcTop.innerText == "*" ||
+      calcTop.innerText == "+" ||
+      calcTop.innerText == "-" ||
+      calcTop.innerText == "/" ||
+      calcBottom.innerText == ""
+    ) {
+      calcTop.innerText = calcTop.innerText;
+    } else if (calcTop.innerText.includes("*") == true) {
       calcTop.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
           parseFloat(calcBottom.innerText) +
@@ -214,7 +247,7 @@ function divisionOp() {
         "/";
       calcBottom.innerText = "";
     } else {
-      calcBottom.innerText += calcOp[4].innerText;
+      calcBottom.innerText += calcOp[3].innerText;
       calcTop.innerText = calcBottom.innerText;
       calcBottom.innerText = "";
     }
@@ -224,8 +257,16 @@ function divisionOp() {
 // Does the Mathematical Equation and returns it in bottom half of the calculator display
 // Empties the top half of the Calculator Display
 function equalsOp() {
-  calcOp[3].addEventListener("click", () => {
-    if (calcTop.innerText.includes("*") == true) {
+  equals.addEventListener("click", () => {
+    if (
+      calcTop.innerText == "*" ||
+      calcTop.innerText == "+" ||
+      calcTop.innerText == "-" ||
+      calcTop.innerText == "/" ||
+      calcBottom.innerText == ""
+    ) {
+      calcBottom.innerText == calcBottom.innerText;
+    } else if (calcTop.innerText.includes("*") == true) {
       calcBottom.innerText =
         parseFloat(calcTop.innerText.split("*")[0]) *
         parseFloat(calcBottom.innerText);
@@ -322,13 +363,13 @@ function keyboardShortcuts() {
     }
   });
   document.addEventListener("keyup", function (event) {
-    if (event.keyCode === 187 && event.shiftKey != true) {
+    if (event.keyCode === 191) {
       calcOp[3].click();
     }
   });
   document.addEventListener("keyup", function (event) {
-    if (event.keyCode === 191) {
-      calcOp[4].click();
+    if (event.keyCode === 187 && event.shiftKey != true) {
+      equals.click();
     }
   });
   document.addEventListener("keyup", function (event) {
