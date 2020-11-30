@@ -301,6 +301,11 @@ function keyboardShortcuts() {
       number[2].click();
     }
   });
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 190) {
+      decimal.click();
+    }
+  });
 }
 
 calculator();
