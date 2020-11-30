@@ -1,11 +1,11 @@
-let calcTop = document.getElementById("calc-display-top");
-let calcBottom = document.getElementById("calc-display-bottom");
-let number = document.getElementsByClassName("number");
-let decimal = document.getElementById("decimal");
-let calcOp = document.getElementsByClassName("operation");
-let clear = document.getElementById("clear");
-let deleteLast = document.getElementById("delete");
-let equals = document.getElementById("equals");
+const calcTop = document.getElementById("calc-display-top");
+const calcBottom = document.getElementById("calc-display-bottom");
+const number = document.getElementsByClassName("number");
+const decimal = document.getElementById("decimal");
+const calcOp = document.getElementsByClassName("operation");
+const clear = document.getElementById("clear");
+const deleteLast = document.getElementById("delete");
+const equals = document.getElementById("equals");
 
 calcBottom.innerText = "";
 calcTop.innerText = "";
