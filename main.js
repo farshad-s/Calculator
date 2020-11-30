@@ -19,6 +19,7 @@ function calculator() {
   subtractionOp();
   divisionOp();
   equalsOp();
+  keyboardShortcuts();
 }
 
 // Clears all of the calculator
@@ -244,6 +245,15 @@ function equalsOp() {
         parseFloat(calcTop.innerText.split("/")[0]) /
         parseFloat(calcBottom.innerText);
       calcTop.innerText = "";
+    }
+  });
+}
+
+// Adds accessibility by allowing you to use the keyboard
+function keyboardShortcuts() {
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode === 49) {
+      number[6].click();
     }
   });
 }
