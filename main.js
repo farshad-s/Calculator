@@ -249,7 +249,7 @@ function equalsOp() {
   });
 }
 
-// Adds accessibility by allowing you to use the keyboard
+// Adds accessibility by allowing you to use the keyboard without using tab
 function keyboardShortcuts() {
   document.addEventListener("keyup", function (event) {
     if (event.keyCode === 48) {
