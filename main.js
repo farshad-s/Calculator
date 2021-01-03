@@ -34,11 +34,7 @@ function clearCalc() {
 // Removes the last entry in the calculator
 function removeLast() {
   deleteLast.addEventListener("click", () => {
-    calcBottom.innerText = calcBottom.innerText
-      .toString()
-      .split("")
-      .slice(0, -1)
-      .join("");
+    calcBottom.innerText = calcBottom.innerText.slice(0, -1);
   });
 }
 
